@@ -1,0 +1,69 @@
+body {
+    margin-top: 50px;
+    background-color: #eeeeee;
+}
+
+.text-center {
+    text-align: center;
+}
+.header-text{
+    color: #337ab7;
+    margin-top: 10px
+}
+
+table{
+    background: #f8f8f8;
+    color: #337ab7;;
+}
+
+.table-curved {
+    border-collapse: separate;
+}
+.table-curved {
+    border: solid #ccc 1px;
+    border-radius: 6px;
+    border-left:0px;
+}
+.table-curved td, .table-curved th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.table-curved th {
+    border-top: none;
+}
+.table-curved th:first-child {
+    border-radius: 6px 0 0 0;
+}
+.table-curved th:last-child {
+    border-radius: 0 6px 0 0;
+}
+.table-curved th:only-child{
+    border-radius: 6px 6px 0 0;
+}
+.table-curved tr:last-child td:first-child {
+    border-radius: 0 0 0 6px;
+}
+.table-curved tr:last-child td:last-child {
+    border-radius: 0 0 6px 0;
+}
+
+.custom-cell{
+    background: #f8f8f8;
+    width: 100px;
+}
+
+.short-cell{
+    width: 150px;
+}
+
+.short-input{
+    width: 100px;
+}
+
+.long-input{
+    width: 250px;
+}
+
+input{
+    border-radius: 4px;
+}

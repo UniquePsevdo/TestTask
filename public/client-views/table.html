@@ -1,0 +1,30 @@
+﻿<div class="panel-body">
+    <h3 class="header-text">Verses data table</h3>
+    <table class="table table-bordered table-curved">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Author</th>
+                <th class="text-center">Is learned?</th>
+                <th class="text-center">Number of lines</th>
+                <th class="text-center"><button class="btn btn-primary" ng-click="editOrCreate()">Add new</button></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="verse in verses">
+                <td>{{verse.name}}</td>
+                <td>{{verse.author}}</td>
+                <td class="short-cell text-center">{{verse.isLearned ? 'yes' : 'no'}}</td>
+                <td class="short-cell text-center">{{verse.numbersOfLine}}</td>
+                <td class="text-center custom-cell">
+                    <button class="btn btn-primary btn-sm" ng-click="delete(verse)">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </button>
+                    <button class="btn btn-primary btn-sm" ng-click="editOrCreate(verse)">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

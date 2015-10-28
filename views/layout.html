@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="testTaskApp">
+
+<head>
+	<title>{{title}}</title>
+	<base href="/">
+	<script src="lib/angular.min.js"></script>
+	<script src="lib/angular-resource.min.js"></script>
+	<script src="lib/angular-route.min.js"></script>
+	<link href="lib/css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="lib/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="resources/css/style.css" rel="stylesheet" />
+
+	<script src="controllers/verses-controller.js"></script>
+
+</head>
+
+<body ng-controller="versesCtrl" class="ng-cloak">
+	<header class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="text-center">
+						<h3 class="header-text" ng-show="isHome">Test task</h3>
+						<h3 class="header-text" ng-show="!isHome"><a href="#" ng-click="goHome()">Home</a></h3>
+					</div>
+				</div>
+			</div>
+	</header>
+
+
+	<section class="content">
+		<section class="container">
+			{% block content %}{% endblock %}
+		</section>
+	</section>
+
+	<footer>
+		<div class="navbar navbar-default navbar-fixed-bottom" id="footer" style="text-align: center; margin: 0 auto">
+			<span>Created by Volodymyr Sydorov,</span>
+			<span><a href="#">e-mail: wladimir.sidorow@gmail.com</a> .</span>
+		</div>
+	</footer>
+</body>
+
+</html>
