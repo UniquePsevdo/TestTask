@@ -1,5 +1,6 @@
 angular.module("testTaskApp", ["ngResource", "ngRoute"])
     .constant("baseUrl", "https://pacific-falls-9127.herokuapp.com/api/verses/")
+    /*.constant("baseUrl", "http://localhost:8000/api/verses/")*/
     .config(function ($locationProvider, $routeProvider) {
 
         $locationProvider.html5Mode(true);
