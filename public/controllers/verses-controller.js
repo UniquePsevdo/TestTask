@@ -29,12 +29,10 @@ angular.module("testTaskApp", ["ngResource", "ngRoute"])
         }
         $scope.isCreateVerse = false;
 
-        // получение всех данных из модели
         $scope.refresh = function() {
             $scope.verses = $scope.versesResource.query();
         }
 
-        // создание нового элемента
         $scope.create = function (verse) {
             new $scope.versesResource(verse).$save().then(function (newVerse) {
                 $scope.verses.push(newVerse);
@@ -43,7 +41,6 @@ angular.module("testTaskApp", ["ngResource", "ngRoute"])
             });
         }
 
-        // обновление элемента
         $scope.update = function (verse) {
             verse.$update();
             $location.path("/");
@@ -51,7 +48,6 @@ angular.module("testTaskApp", ["ngResource", "ngRoute"])
             console.log($scope.isHome);
         }
 
-        // удаление элемента из модели
         $scope.delete = function (verse) {
             var confirm = window.confirm('Are you sure you want delete this?');
             if(confirm){
@@ -63,7 +59,6 @@ angular.module("testTaskApp", ["ngResource", "ngRoute"])
             }
         }
 
-        // редеактирование существующего или создание нового элемента
         $scope.editOrCreate = function (verse) {
             if(!verse){
                 $location.path("/create");
@@ -77,7 +72,6 @@ angular.module("testTaskApp", ["ngResource", "ngRoute"])
             $scope.isHome = false;
         }
 
-        // сохранение изменений
         $scope.saveEdit = function (verse) {
             if (angular.isDefined(verse._id)) {
                 $scope.update(verse);
@@ -86,7 +80,6 @@ angular.module("testTaskApp", ["ngResource", "ngRoute"])
             }
         }
 
-        // отмена изменений и возврат в представление table
         $scope.cancelEdit = function () {
             if ($scope.currentVerse && $scope.currentVerse.$get) {
                 $scope.currentVerse.$get();
